@@ -30,12 +30,12 @@ body {
   background: #3e596f;
   border-radius: 2%;
   box-shadow: 0 0 1rem #e900ff;
-  padding: 3.5em 3.5em 0;
+  padding: 2em 2em 0;
 }
 
 .slider {
   width: 100%;
-  max-width: 80vw;
+  max-width: 95vh;
   overflow: hidden;
   border-radius: 1.5%;
 }
@@ -159,4 +159,39 @@ body {
   transform: scale(1.1);
   border: .2rem solid #f6ff00;
   background: none;
+}
+
+/* media */
+@media (max-width:767px) {
+  body {
+    padding: 1.5rem;
+  }
+  .container {
+    padding: 0.7em 0.7em 0;
+  }
+  .slider {
+    max-width: 100vh;
+  }
+  .slider__nav {
+    flex-direction: column-reverse;
+  }
+
+  .slide__btn {
+    margin-top: 0.2em;
+  }
+
+  .description__slide {
+    margin-top: 0.7em;
+    width: 100%;
+    text-align: left;
+  }
+
+  #meme-1:checked~.slider__nav>.description__slide>.mem__descr:nth-child(1),
+  #meme-2:checked~.slider__nav>.description__slide>.mem__descr:nth-child(2),
+  #meme-3:checked~.slider__nav>.description__slide>.mem__descr:nth-child(3),
+  #meme-4:checked~.slider__nav>.description__slide>.mem__descr:nth-child(4) {
+    transition: .5s linear;
+    line-height: 1.4;
+    font-size: .9em;
+  }
 }
