@@ -151,13 +151,21 @@ body {
   background: none;
 }
 
-/* click btn */
+/* click btn/pressed btn */
 #meme-1:active~.slider__nav>.slide__btn>.btn:nth-child(1) span,
 #meme-2:active~.slider__nav>.slide__btn>.btn:nth-child(2) span,
 #meme-3:active~.slider__nav>.slide__btn>.btn:nth-child(3) span,
 #meme-4:active~.slider__nav>.slide__btn>.btn:nth-child(4) span {
   transform: scale(1.1);
-  border: .2rem solid #f6ff00;
+  border: .2rem solid #ff0000;
+  background: none;
+}
+#meme-1:checked:active~.slider__nav>.slide__btn>.btn:nth-child(1) span,
+#meme-2:checked:active~.slider__nav>.slide__btn>.btn:nth-child(2) span,
+#meme-3:checked:active~.slider__nav>.slide__btn>.btn:nth-child(3) span,
+#meme-4:checked:active~.slider__nav>.slide__btn>.btn:nth-child(4) span {
+  transform: scale(1.1);
+  border: .2rem solid #ff0000;
   background: none;
 }
 
