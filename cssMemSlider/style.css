@@ -30,7 +30,7 @@ body {
   background: #3e596f;
   border-radius: 2%;
   box-shadow: 0 0 1rem #e900ff;
-  padding: 2em 2em 0;
+  padding: 0.7em 0.7em 0;
 }
 
 .slider {
@@ -186,7 +186,6 @@ body {
   }
 
   .container {
-    padding: 0.7em 0.7em 0;
     max-height: 100vh;
   }
 
