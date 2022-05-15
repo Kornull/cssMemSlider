@@ -19,16 +19,15 @@ p {
   font-size: 1.2rem;
 }
 
-
-
-
 body {
   padding: 4rem;
   background-color: #3a2e33;
   font-family: 'Roboto', sans-serif;
 }
+
 /* ========================== */
 
+/* Slider */
 .container {
   width: 100%;
   max-width: 90vh;
@@ -88,7 +87,6 @@ body {
   cursor: pointer;
 }
 
-
 .btn span {
   display: block;
   width: 0.9em;
@@ -98,32 +96,14 @@ body {
   transition: border .19s linear;
 }
 
-
 .btn:hover span {
   border: .2rem solid #f6ff00;
-  background: none;
+  background: #f6ff00;
   transform: scale(0.9);
 }
 
-
 #meme-1:checked~.slider__block>.meme-1 {
   margin-left: 0;
-}
-
-#meme-1:checked~.slider__block>.slide:nth-child(1) p {
-  color: #ffffff;
-}
-
-#meme-1:active~.slider__nav>.btn:nth-child(1) span {
-  transform: scale(1.1);
-  border: .2rem solid #f6ff00;
-  ;
-  background: none;
-}
-
-#meme-1:checked~.slider__nav>.btn:nth-child(1) span {
-  border: .2rem solid #f6ff00;
-  background: none;
 }
 
 #meme-2:checked~.slider__block>.meme-1 {
@@ -131,38 +111,10 @@ body {
   margin-left: -25%;
 }
 
-#meme-2:checked~.slider__block>.slide:nth-child(2) p {
-  color: #ffffff;
-}
-#meme-2:active~.slider__nav>.btn:nth-child(2) span {
-  transform: scale(1.1);
-  border: .2rem solid #f6ff00;
-  ;
-  background: none;
-}
-
-#meme-2:checked~.slider__nav>.btn:nth-child(2) span {
-  border: .2rem solid #f6ff00;
-  background: none;
-}
 
 #meme-3:checked~.slider__block>.meme-1 {
   transition: .3s linear;
   margin-left: -50%;
-}
-
-#meme-3:checked~.slider__block>.slide:nth-child(3) p {
-  color: #ffffff;
-}
-#meme-3:active~.slider__nav>.btn:nth-child(3) span {
-  transform: scale(1.1);
-  border: .2rem solid #f6ff00;
-  ;
-  background: none;
-}
-#meme-3:checked~.slider__nav>.btn:nth-child(3) span {
-  border: .2rem solid #f6ff00;
-  background: none;
 }
 
 #meme-4:checked~.slider__block>.meme-1 {
@@ -170,16 +122,38 @@ body {
   margin-left: -75%;
 }
 
+/* text */
+#meme-1:checked~.slider__block>.slide:nth-child(1) p,
+#meme-2:checked~.slider__block>.slide:nth-child(2) p,
+#meme-3:checked~.slider__block>.slide:nth-child(3) p,
 #meme-4:checked~.slider__block>.slide:nth-child(4) p {
   color: #ffffff;
 }
-#meme-4:active~.slider__nav>.btn:nth-child(4) span {
-  transform: scale(1.1);
-  border: .2rem solid #f6ff00;
-  ;
+
+/* pressed btn  */
+#meme-1:checked~.slider__nav>.btn:nth-child(1) span,
+#meme-2:checked~.slider__nav>.btn:nth-child(2) span,
+#meme-3:checked~.slider__nav>.btn:nth-child(3) span,
+#meme-4:checked~.slider__nav>.btn:nth-child(4) span {
+  border: .2rem solid #62ff00;
   background: none;
 }
-#meme-4:checked~.slider__nav>.btn:nth-child(4) span {
+
+/* hover */
+#meme-1:checked:hover~.slider__nav>.btn:nth-child(1) span,
+#meme-2:checked:hover~.slider__nav>.btn:nth-child(2) span,
+#meme-3:checked:hover~.slider__nav>.btn:nth-child(3) span,
+#meme-4:checked:hover~.slider__nav>.btn:nth-child(4) span {
+  border: .2rem solid #f6ff00;
+  background: none;
+}
+
+/* click btn */
+#meme-1:active~.slider__nav>.btn:nth-child(1) span,
+#meme-2:active~.slider__nav>.btn:nth-child(2) span,
+#meme-3:active~.slider__nav>.btn:nth-child(3) span,
+#meme-4:active~.slider__nav>.btn:nth-child(4) span {
+  transform: scale(1.1);
   border: .2rem solid #f6ff00;
   background: none;
 }
