@@ -11,17 +11,9 @@ input {
   display: none;
 }
 
-p {
-  display: block;
-  padding-top: 0.8em;
-  color: #ffffff00;
-  transition: color 1.5s ease-out;
-  font-size: 1.2rem;
-}
-
 body {
   padding: 4rem;
-  background-color: #3a2e33;
+  background-color: #090038;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -37,7 +29,7 @@ body {
   margin-top: 2rem;
   background: #3e596f;
   border-radius: 2%;
-  box-shadow: 0 0 1rem #f6ff00;
+  box-shadow: 0 0 1rem #e900ff;
   padding: 3.5em 3.5em 0;
 }
 
@@ -65,15 +57,25 @@ body {
 }
 
 .slider__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
+}
+
+/* slide description */
+.mem__descr {
+  color: #ffffff;
+  font-size: 0;
+}
+
+/* Btns */
+.slide__btn {
   background: none;
   display: flex;
-  margin-top: -2.5%;
-  padding-bottom: 2rem;
   align-items: center;
   justify-content: end;
 }
-
-/* Btns  */
 
 .btn {
   display: flex;
@@ -123,36 +125,37 @@ body {
 }
 
 /* text */
-#meme-1:checked~.slider__block>.slide:nth-child(1) p,
-#meme-2:checked~.slider__block>.slide:nth-child(2) p,
-#meme-3:checked~.slider__block>.slide:nth-child(3) p,
-#meme-4:checked~.slider__block>.slide:nth-child(4) p {
-  color: #ffffff;
+#meme-1:checked~.slider__nav>.description__slide>.mem__descr:nth-child(1),
+#meme-2:checked~.slider__nav>.description__slide>.mem__descr:nth-child(2),
+#meme-3:checked~.slider__nav>.description__slide>.mem__descr:nth-child(3),
+#meme-4:checked~.slider__nav>.description__slide>.mem__descr:nth-child(4) {
+  transition: .5s linear;
+  font-size: 1.2em;
 }
 
 /* pressed btn  */
-#meme-1:checked~.slider__nav>.btn:nth-child(1) span,
-#meme-2:checked~.slider__nav>.btn:nth-child(2) span,
-#meme-3:checked~.slider__nav>.btn:nth-child(3) span,
-#meme-4:checked~.slider__nav>.btn:nth-child(4) span {
+#meme-1:checked~.slider__nav>.slide__btn>.btn:nth-child(1) span,
+#meme-2:checked~.slider__nav>.slide__btn>.btn:nth-child(2) span,
+#meme-3:checked~.slider__nav>.slide__btn>.btn:nth-child(3) span,
+#meme-4:checked~.slider__nav>.slide__btn>.btn:nth-child(4) span {
   border: .2rem solid #62ff00;
   background: none;
 }
 
 /* hover */
-#meme-1:checked:hover~.slider__nav>.btn:nth-child(1) span,
-#meme-2:checked:hover~.slider__nav>.btn:nth-child(2) span,
-#meme-3:checked:hover~.slider__nav>.btn:nth-child(3) span,
-#meme-4:checked:hover~.slider__nav>.btn:nth-child(4) span {
+#meme-1:checked:hover~.slider__nav>.slide__btn>.btn:nth-child(1) span,
+#meme-2:checked:hover~.slider__nav>.slide__btn>.btn:nth-child(2) span,
+#meme-3:checked:hover~.slider__nav>.slide__btn>.btn:nth-child(3) span,
+#meme-4:checked:hover~.slider__nav>.slide__btn>.btn:nth-child(4) span {
   border: .2rem solid #f6ff00;
   background: none;
 }
 
 /* click btn */
-#meme-1:active~.slider__nav>.btn:nth-child(1) span,
-#meme-2:active~.slider__nav>.btn:nth-child(2) span,
-#meme-3:active~.slider__nav>.btn:nth-child(3) span,
-#meme-4:active~.slider__nav>.btn:nth-child(4) span {
+#meme-1:active~.slider__nav>.slide__btn>.btn:nth-child(1) span,
+#meme-2:active~.slider__nav>.slide__btn>.btn:nth-child(2) span,
+#meme-3:active~.slider__nav>.slide__btn>.btn:nth-child(3) span,
+#meme-4:active~.slider__nav>.slide__btn>.btn:nth-child(4) span {
   transform: scale(1.1);
   border: .2rem solid #f6ff00;
   background: none;
