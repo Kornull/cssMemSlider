@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>CSS Meme</title>
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="slider">
+
+      <input type="radio" name="slide" id="meme-1" checked>
+      <input type="radio" name="slide" id="meme-2">
+      <input type="radio" name="slide" id="meme-3">
+      <input type="radio" name="slide" id="meme-4">
+
+      <div class="slider__block">
+        <div class="slide meme-1">
+          <img class="slide__img" src="./img/nick.png" alt="">
+        </div>
+
+        <div class="slide meme-2">
+          <img class="slide__img" src="./img/like.jpg" alt="">
+        </div>
+
+        <div class="slide meme-3">
+          <img class="slide__img" src="./img/study.jpg" alt="">
+        </div>
+
+        <div class="slide meme-4">
+          <img class="slide__img" src="./img/oh.jpg" alt="">
+        </div>
+      </div> <!-- ./slider__block -->
+
+      <div class="slider__nav">
+        <div class="description__slide">
+          <div class="mem__descr">Когда не скрыл свой ник на кросс-чеке.</div>
+          <div class="mem__descr">Student1 поставил максимальный балл.</div>
+          <div class="mem__descr">Учеба в RS School.</div>
+          <div class="mem__descr">Когда всё сделал и обнаружил баг.</div>
+        </div>
+        <div class="slide__btn">
+          <label for="meme-1" class="btn"><span></span></label>
+          <label for="meme-2" class="btn"><span></span></label>
+          <label for="meme-3" class="btn"><span></span></label>
+          <label for="meme-4" class="btn"><span></span></label>
+        </div>
+      </div> <!-- ./slider-nav -->
+    </div> <!-- ./slider -->
+
+  </div>
+</body>
+
+</html>
